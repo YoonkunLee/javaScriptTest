@@ -23,11 +23,12 @@
             color: #ffffff;
             font-size: 24pt;
         }
-        .container, main{
+
+        .container, main {
             height: 100%;
         }
-
     </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
         window.onload = function () {
@@ -72,10 +73,23 @@
                 });
             });
         }
+
+        jQuery(document).ready(function ($) {
+
+            $(".scroll").click(function (event) {
+
+                event.preventDefault();
+
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+
+            });
+
+        });
     </script>
 </head>
 <body>
     <div class="box" style="background-color: red; ">
+        <a href="#target1" class="scroll">Go to Page 5</a>
         <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -125,7 +139,7 @@
     <div class="box" style="background-color:orange;">2</div>
     <div class="box" style="background-color:yellow;">3</div>
     <div class="box" style="background-color:green;">4</div>
-    <div class="box" style="background-color:blue;">5</div>
+    <div id="target1" class="box" style="background-color:blue;">5</div>
     <div class="box" style="background-color:indigo;">6</div>
     <div class="box" style="background-color:violet;">7</div>
 </body>
