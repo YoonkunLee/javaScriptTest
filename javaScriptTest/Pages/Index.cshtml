@@ -1,8 +1,10 @@
 ﻿@page
 @{
     ViewData["Title"] = "Home page";
-<script src="~/js/Slider.js"></script>
+
 <link href="~/css/slider.css" rel="stylesheet" />
+<script src="~/js/Slider.js"></script>
+<script src="~/js/SliderAuto.js"></script>
 }
 
 <html>
@@ -91,7 +93,7 @@
     <div class="box" style="background-color: red; ">
         <a href="#target1" class="scroll">Go to Page 5</a>
         <div class="slideshow-container">
-            <div class="mySlides">
+            <div class="mySlides ">
                 <div class="numbertext">1 / 5</div>
                 <img src="~/Images/battlefield1.jpg" style="width:100%">
                 <div class="text">Caption One</div>
@@ -103,19 +105,19 @@
                 <div class="text">Caption Two</div>
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides ">
                 <div class="numbertext">3 / 5</div>
                 <img src="~/Images/battlefield3.jpg" style="width:100%">
                 <div class="text">Caption Three</div>
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides ">
                 <div class="numbertext">4 / 5</div>
                 <img src="~/Images/battlefield4.jpg" style="width:100%">
                 <div class="text">Caption Four</div>
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides ">
                 <div class="numbertext">5 / 5</div>
                 <img src="~/Images/battlefield5.jpg" style="width:100%">
                 <div class="text">Caption Five</div>
@@ -135,7 +137,48 @@
             <span class="dot" onclick="currentSlide(5)"></span>
         </div>
     </div>
-    <div class="box" style="background-color:orange;">2</div>
+    <div class="box" style="background-color:orange;">
+        <div class="slideshow-container1">
+            <div class="myAutoSlides fade">
+                <div class="numbertext1">1 / 5</div>
+                <img src="~/Images/LOL1.jpg" style="width:100%">
+                <div class="text1">Caption One</div>
+            </div>
+
+            <div class="myAutoSlides fade">
+                <div class="numbertext1">2 / 5</div>
+                <img src="~/Images/LOL2.jpg" style="width:100%">
+                <div class="text1">Caption Two</div>
+            </div>
+
+            <div class="myAutoSlides fade">
+                <div class="numbertext1">3 / 5</div>
+                <img src="~/Images/LOL3.jpg" style="width:100%">
+                <div class="text1">Caption Three</div>
+            </div>
+
+            <div class="myAutoSlides fade">
+                <div class="numbertext1">4 / 5</div>
+                <img src="~/Images/LOL4.jpg" style="width:100%">
+                <div class="text1">Caption Four</div>
+            </div>
+
+            <div class="myAutoSlides fade">
+                <div class="numbertext1">5 / 5</div>
+                <img src="~/Images/LOL5.jpg" style="width:100%">
+                <div class="text1">Caption Five</div>
+            </div>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="autoDot"></span>
+            <span class="autoDot"></span>
+            <span class="autoDot"></span>
+            <span class="autoDot"></span>
+            <span class="autoDot"></span>
+        </div>
+    </div>
     <div class="box" style="background-color:yellow;">3</div>
     <div class="box" style="background-color:green;">4</div>
     <div id="target1" class="box" style="background-color:blue;">5</div>
