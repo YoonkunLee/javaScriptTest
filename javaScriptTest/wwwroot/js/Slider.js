@@ -23,4 +23,4 @@ function showSlides(n) {
 }
 
 var slideIndex = 1;
-showSlides(1);
+showSlides(slideIndex);
