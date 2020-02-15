@@ -1,0 +1,88 @@
+﻿@page
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        .slide {
+            height: 150px;
+            overflow: hidden;
+        }
+
+            .slide ul {
+                height: 100%;
+            }
+
+            .slide li {
+                height: 100%;
+            }
+
+                .slide li:nth-child(1) {
+                    background: #faa;
+                }
+
+                .slide li:nth-child(2) {
+                    background: #afa;
+                }
+
+                .slide li:nth-child(3) {
+                    background: #aaf;
+                }
+
+                .slide li:nth-child(4) {
+                    background: #faf;
+                }
+    </style>
+    <script>
+const all = ele => document.querySelectorAll(ele)
+const one = ele => document.querySelector(ele)
+const slide = _ => {
+  const wrap = one('.slide')
+  const target = wrap.children[0]
+  const len = target.children.length
+  const liStyle = `
+    position:absolute;
+    left:0;right:0;top:0;bottom:0;transition:1s;opacity:0
+  `
+  target.style.cssText = `position:relative;`
+  Array.from(target.children)
+  .forEach(ele => ele.style.cssText = liStyle)
+  target.children[0].style.opacity = 1
+  let pos = 0
+  setInterval(_ => {
+    target.children[pos].style.opacity = 0
+    pos = (pos + 1) % len
+    target.children[pos].style.opacity = 1
+  }, 1500)
+}
+window.onload = function () {
+  slide()
+}
+    </script>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
