@@ -6,6 +6,8 @@
 <script src="~/js/Slider.js"></script>
 <script src="~/js/SliderAuto.js"></script>
 <link href="~/css/sliderAuto.css" rel="stylesheet" />
+<link href="~/css/slide.css" rel="stylesheet" />
+<script src="~/js/Slide.js"></script>
 }
 
 <html>
@@ -30,6 +32,45 @@
         .container, main {
             height: 100%;
         }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        .slide {
+            height: 300px;
+            overflow: hidden;
+        }
+
+            .slide ul {
+                height: 100%;
+            }
+
+            .slide li {
+                height: 100%;
+            }
+
+                .slide li:nth-child(1) {
+                    background-image: url('images/battlefield1.jpg');
+                }
+
+                .slide li:nth-child(2) {
+                    background-image: url('images/battlefield2.jpg');
+                }
+
+                .slide li:nth-child(3) {
+                    background-image: url('images/battlefield3.jpg');
+                }
+
+                .slide li:nth-child(4) {
+                    background-image: url('images/battlefield4.jpg');
+                }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -125,8 +166,15 @@
             <span class="autoDot"></span>
         </div>
     </div>
-    <div class="box" style="background-color:yellow;">        
-        
+    <div class="box" style="background-color:yellow;">
+        <div class="slide">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
     <div class="box" style="background-color:green;">4</div>
     <div id="target1" class="box" style="background-color:blue;">5</div>

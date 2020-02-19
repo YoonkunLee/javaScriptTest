@@ -1,0 +1,41 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.slide {
+    height: 150px;
+    overflow: hidden;
+}
+
+    .slide ul {
+        height: 100%;
+    }
+
+    .slide li {
+        height: 100%;
+    }
+
+        .slide li:nth-child(1) {
+            background-image: url('images/lol1.jpg');
+        }
+
+        .slide li:nth-child(2) {
+            background-image: url('images/lol2.jpg');
+        }
+
+        .slide li:nth-child(3) {
+            background-image: url('images/lol3.jpg');
+        }
+
+        .slide li:nth-child(4) {
+            background-image: url('images/lol4.jpg');
+        }
+
+        .slide li:nth-child(4) {
+            background-image: url('images/lol5.jpg');
+        }
