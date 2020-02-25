@@ -1,0 +1,36 @@
+﻿@page
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <script src="js/junil.animation.js"></script>
+    <script src="~/js/animation.js"></script>
+</head>
+<body>
+    <a href="#" onclick="new junil.Animation({playTarget: 'body'})">애니메이션 실행</a>
+    <a href="#" onclick="new junil.Animation({playTarget: 'body', reverse: true})">애니메이션 역실행</a>
+    <a href="#" onclick="new junil.Animation({playTarget: 'body', callback: () => { new junil.Animation({playTarget: 'body', reverse: true}) }})">애니메이션 실행 후 역실행</a>
+    <section>
+        <h1 class="animation left2right">제목1</h1>
+        <p class="animation big2small">내용1</p>
+    </section>
+    <section>
+        <h2 class="animation right2left">제목2</h2>
+        <p class="animation top2btm">내용2</p>
+    </section>
+    <section>
+        <h3 class="animation left2right">제목3</h3>
+        <p class="animation btm2top">내용3</p>
+    </section>
+    <section>
+        <h4 class="animation right2left">제목4</h4>
+        <p class="animation small2big">내용4</p>
+    </section>
+    <section>
+        <h5 class="animation left2right">제목5</h5>
+        <p class="animation default">내용5</p>
+    </section>
+    <section>
+        <h6 class="animation right2left">제목6</h6>
+        <p class="animation big2small">내용6</p>
+    </section>
+</body>
