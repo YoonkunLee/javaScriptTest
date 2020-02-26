@@ -2,15 +2,15 @@
     box-sizing: border-box;
 }
 
-body {
+body1 {
     font-family: Verdana, sans-serif;
 }
 
-.myAutoSlides {
+.myAutoSlides1 {
     display: none;
 }
 
-img {
+img1 {
     vertical-align: middle;
 }
 
@@ -42,7 +42,7 @@ img {
 }
 
 /* The dots/bullets/indicators */
-.autoDot {
+.autoDot1 {
     height: 15px;
     width: 15px;
     margin: 0 2px;
