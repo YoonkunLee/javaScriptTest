@@ -8,26 +8,21 @@
             margin: 0;
             padding: 0;
         }
-
         ul, li {
             list-style: none;
         }
-
         .slide {
             height: 300px;
             overflow: hidden;
             position: relative;
         }
-
             .slide ul {
                 height: calc(100% * 4);
                 transition: 1s;
             }
-
             .slide li {
                 height: calc(100% / 4);
             }
-
                 .slide li:nth-child(1) {
                     background: #ffa;
                 }
@@ -47,7 +42,6 @@
             .slide input {
                 display: none;
             }
-
             .slide .bullet {
                 position: absolute;
                 bottom: 20px;
@@ -56,7 +50,6 @@
                 text-align: center;
                 z-index: 10;
             }
-
                 .slide .bullet label {
                     width: 10px;
                     height: 10px;
@@ -72,15 +65,12 @@
         #pos1:checked ~ ul {
             margin-top: 0;
         }
-
         #pos2:checked ~ ul {
             margin-top: -300px;
         }
-
         #pos3:checked ~ ul {
             margin-top: -600px;
         }
-
         #pos4:checked ~ ul {
             margin-top: -900px;
         }
